@@ -30,7 +30,7 @@ public class MoveBall : MonoBehaviour
     {
         Debug.Log(collision.gameObject.name);
 
-        if (collision.gameObject.CompareTag("Horizonatal"))
+        if (collision.gameObject.CompareTag("Horizontal"))
         {
             direccion.y *= -1;
         }
@@ -42,7 +42,7 @@ public class MoveBall : MonoBehaviour
         {
             Spawn();
         }
-        if (collision.gameObject.CompareTag("Blokes"))
+        if (collision.gameObject.CompareTag("Blokest"))
         {
             direccion.y *= -1;
             Destroy(collision.gameObject);
