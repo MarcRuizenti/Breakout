@@ -4,11 +4,11 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Horizaontal
   - Blokest
   - Vertical
   - Pala
   - Suelo
+  - Horizontal
   layers:
   - Default
   - TransparentFX
