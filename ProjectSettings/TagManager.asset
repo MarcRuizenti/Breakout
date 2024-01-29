@@ -9,6 +9,9 @@ TagManager:
   - Pala
   - Suelo
   - Horizontal
+  - BallExtra
+  - MultiBall
+  - Escopeta
   layers:
   - Default
   - TransparentFX

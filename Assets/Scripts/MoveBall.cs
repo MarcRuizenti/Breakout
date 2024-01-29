@@ -29,9 +29,9 @@ public class MoveBall : MonoBehaviour
         direccion = new Vector3(horizontal, vertical, 0f).normalized;
     }
 
-    void SpawnPowerUP()
+    void SpawnPowerUP(Collider2D collision)
     {
-
+        GameObject temp = Instantiate(multiBall, collision.transform.position, collision.transform.rotation);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -54,6 +54,10 @@ public class MoveBall : MonoBehaviour
         {
             direccion.y *= -1;
             Destroy(collision.gameObject);
+
+            SpawnPowerUP(collision);
+
+
         }
         if (collision.gameObject.CompareTag("Pala"))
         {
