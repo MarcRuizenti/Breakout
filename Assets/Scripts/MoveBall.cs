@@ -6,6 +6,9 @@ public class MoveBall : MonoBehaviour
 {
     private Vector3 direccion;
     public float speed;
+    public GameObject multiBall;
+    public GameObject extraBall;
+    public GameObject escopeta;
 
 
     private void Start()
@@ -24,6 +27,11 @@ public class MoveBall : MonoBehaviour
         float horizontal = Random.Range(-1f, 1f);
         float vertical = -1f;
         direccion = new Vector3(horizontal, vertical, 0f).normalized;
+    }
+
+    void SpawnPowerUP()
+    {
+
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
