@@ -14,12 +14,14 @@ public class MoveBall : MonoBehaviour
     private float probalidadSpawPowerUp;
     private Ball ball;
     private UI ui;
+    private BallManager ballManager;
 
     public enum Ball {MULTIBALL, EXTRABALL, ESCOPETA, NADA};
     private void Start()
     {
         Time.timeScale = 1f;
         ui = FindObjectOfType<UI>();
+        ballManager = FindObjectOfType<BallManager>();  
     }
     void Update()
     {
@@ -30,8 +32,9 @@ public class MoveBall : MonoBehaviour
         transform.position += direccion * Time.deltaTime * speed;
     }
 
-    void Spawn()
+    public void Spawn()
     {
+        transform.position = new Vector3(0, -0.9f, 0);
         float vertical = -1f;
         float horizontal = Random.Range(-1f, 1f);
         direccion = new Vector3(horizontal, vertical, 0f).normalized;
@@ -76,11 +79,14 @@ public class MoveBall : MonoBehaviour
         if (collision.gameObject.CompareTag("Suelo"))
         {
             Destroy(gameObject);
+            ballManager.balls.Remove(gameObject);
             ui.vidas -= 1;
         }
         if (collision.gameObject.CompareTag("Blokest"))
         {
-            direccion.y *= -1;
+            Vector3 newDirecction = transform.position - collision.transform.position;
+            newDirecction.Normalize();
+            direccion = newDirecction;
             Destroy(collision.gameObject);
 
             probalidadSpawPowerUp = Random.Range(1, 10);
