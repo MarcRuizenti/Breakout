@@ -9,6 +9,8 @@ public class MultiBall : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Pala"))
         {
+
+
             Destroy(gameObject);
         }
     }

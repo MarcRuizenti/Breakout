@@ -80,9 +80,11 @@ public class MoveBall : MonoBehaviour
             Destroy(collision.gameObject);
 
             probalidadSpawPowerUp = Random.Range(1, 10);
+            if (probalidadSpawPowerUp <= 2)
+            {
+                SpawnPowerUP(collision);
+            }
 
-            SpawnPowerUP(collision);
-            
         }
         if (collision.gameObject.CompareTag("Pala"))
         {
