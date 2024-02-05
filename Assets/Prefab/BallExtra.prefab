@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 228970733426108029}
   - component: {fileID: 5388935658288902352}
   - component: {fileID: 4767713459122795126}
+  - component: {fileID: 5185205348246611953}
   m_Layer: 0
   m_Name: BallExtra
   m_TagString: BallExtra
@@ -115,7 +116,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -158,3 +159,16 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &5185205348246611953
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8895640135243402369}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f40cbb25ee9e4a409609e191f75f9d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pelota: {fileID: 379611415945426003, guid: 92250fa7975955c4ba06b32eed036183, type: 3}

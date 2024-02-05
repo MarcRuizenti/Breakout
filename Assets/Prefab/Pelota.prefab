@@ -99,6 +99,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b092d6459fee5dc4ea6f348c4af98db3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  direccion: {x: 0, y: 0, z: 0}
   speed: 6
   multiBall: {fileID: 5928707346622265239, guid: 5c014d51e551baf4c9c9a13e4c5229f5, type: 3}
   extraBall: {fileID: 8895640135243402369, guid: e659ee107b218ea4ebc5707115aeb6b5, type: 3}
@@ -132,7 +133,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
