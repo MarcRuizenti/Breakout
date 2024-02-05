@@ -5,10 +5,13 @@ using UnityEngine;
 
 public class UI : MonoBehaviour
 {
-    public TextMeshPro Puntuacion;
-    public TextMeshPro Vidas;
+    public TextMeshProUGUI Puntuacion;
+    public TextMeshProUGUI Vidas;
+    public float vidas;
+    public float puntuacion;
     void Update()
     {
-        
+        Vidas.text = vidas.ToString();
+        Puntuacion.text = puntuacion.ToString();
     }
 }

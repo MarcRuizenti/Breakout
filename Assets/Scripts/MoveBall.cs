@@ -1,5 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class MoveBall : MonoBehaviour
@@ -11,12 +13,13 @@ public class MoveBall : MonoBehaviour
     public GameObject escopeta;
     private float probalidadSpawPowerUp;
     private Ball ball;
+    private UI ui;
 
     public enum Ball {MULTIBALL, EXTRABALL, ESCOPETA, NADA};
     private void Start()
     {
         Time.timeScale = 1f;
-        
+        ui = FindObjectOfType<UI>();
     }
     void Update()
     {
@@ -73,6 +76,7 @@ public class MoveBall : MonoBehaviour
         if (collision.gameObject.CompareTag("Suelo"))
         {
             Destroy(gameObject);
+            ui.vidas -= 1;
         }
         if (collision.gameObject.CompareTag("Blokest"))
         {
@@ -83,6 +87,30 @@ public class MoveBall : MonoBehaviour
             if (probalidadSpawPowerUp <= 2)
             {
                 SpawnPowerUP(collision);
+            }
+            if (collision.gameObject.transform.parent.CompareTag("1"))
+            {
+                ui.puntuacion += 1;
+            }
+            else if (collision.gameObject.transform.parent.CompareTag("2"))
+            {
+                ui.puntuacion += 2;
+            }
+            else if (collision.gameObject.transform.parent.CompareTag("3"))
+            {
+                ui.puntuacion += 3;
+            }
+            else if (collision.gameObject.transform.parent.CompareTag("4"))
+            {
+                ui.puntuacion += 4;
+            }
+            else if (collision.gameObject.transform.parent.CompareTag("5"))
+            {
+                ui.puntuacion += 5;
+            }
+            else if (collision.gameObject.transform.parent.CompareTag("6"))
+            {
+                ui.puntuacion += 6;
             }
 
         }

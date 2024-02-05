@@ -628,7 +628,7 @@ GameObject:
   - component: {fileID: 174871073}
   m_Layer: 0
   m_Name: 4
-  m_TagString: Untagged
+  m_TagString: 4
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1836,8 +1836,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 910, y: 524}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchoredPosition: {x: 899.5879, y: 499.01086}
+  m_SizeDelta: {x: 220.8242, y: 99.9783}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &730269296
 MonoBehaviour:
@@ -1922,7 +1922,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -15.307373, y: 0, z: 17.008179, w: -61.22876}
+  m_margin: {x: 0.7570801, y: 0, z: -0.24609375, w: -0.5407715}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -1947,7 +1947,7 @@ GameObject:
   - component: {fileID: 748759589}
   m_Layer: 0
   m_Name: 5
-  m_TagString: Untagged
+  m_TagString: 5
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2261,8 +2261,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51b5bfa6f0acec74c9099d4646a4eca9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  limiteXnegativo: -8.5
-  limiteXpositivo: 8.5
+  limiteXnegativo: -7
+  limiteXpositivo: 7
 --- !u!1 &832387356
 GameObject:
   m_ObjectHideFlags: 0
@@ -3444,7 +3444,7 @@ GameObject:
   - component: {fileID: 1269920096}
   m_Layer: 0
   m_Name: 1
-  m_TagString: Untagged
+  m_TagString: 1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3634,8 +3634,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30e8fd53e88f25a4184aa4498c246420, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Puntuacion: {fileID: 0}
-  Vidas: {fileID: 0}
+  Puntuacion: {fileID: 1383370673}
+  Vidas: {fileID: 730269296}
+  vidas: 3
+  puntuacion: 0
 --- !u!4 &1386842220
 Transform:
   m_ObjectHideFlags: 0
@@ -4702,7 +4704,7 @@ GameObject:
   - component: {fileID: 1674526533}
   m_Layer: 0
   m_Name: 6
-  m_TagString: Untagged
+  m_TagString: 6
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5389,7 +5391,7 @@ GameObject:
   - component: {fileID: 1852081854}
   m_Layer: 0
   m_Name: 2
-  m_TagString: Untagged
+  m_TagString: 2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5556,7 +5558,7 @@ GameObject:
   - component: {fileID: 1951113840}
   m_Layer: 0
   m_Name: 3
-  m_TagString: Untagged
+  m_TagString: 3
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -5,11 +5,17 @@ using UnityEngine;
 public class Escopeta : MonoBehaviour
 {
     public GameObject pelota;
+    private UI ui;
 
+    private void Start()
+    {
+        ui = FindObjectOfType<UI>();
+    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Pala"))
         {
+
             GameObject tempVertical = Instantiate(pelota, collision.transform.position, collision.transform.rotation);
             tempVertical.GetComponent<MoveBall>().direccion = new Vector3(0, 1f, 0);
 
@@ -20,7 +26,10 @@ public class Escopeta : MonoBehaviour
             GameObject tempIzquierda = Instantiate(pelota, collision.transform.position, collision.transform.rotation);
             tempIzquierda.GetComponent<MoveBall>().direccion = new Vector3(1f, 1f, 0);
 
+
             Destroy(gameObject);
-        }
+
+            ui.vidas += 3;
+        }   
     }
 }

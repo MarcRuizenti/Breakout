@@ -12,6 +12,12 @@ TagManager:
   - BallExtra
   - MultiBall
   - Escopeta
+  - 1
+  - 2
+  - 3
+  - 4
+  - 5
+  - 6
   layers:
   - Default
   - TransparentFX

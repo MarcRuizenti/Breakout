@@ -5,6 +5,11 @@ using UnityEngine;
 public class MultiBall : MonoBehaviour
 {
     public GameObject pelota;
+    private UI ui;
+    private void Start()
+    {
+        ui = FindObjectOfType<UI>();
+    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Pala"))
