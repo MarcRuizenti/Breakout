@@ -10,23 +10,22 @@ public class MultiBall : MonoBehaviour
     private void Start()
     {
         ui = FindObjectOfType<UI>();
-        ballManager = GetComponent<BallManager>();
+        ballManager = FindObjectOfType<BallManager>();
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Pala"))
         {
             List<GameObject> nuevasBolas = new List<GameObject>();
-            if (ballManager != null)
+
+            foreach (GameObject ball in ballManager.balls)
             {
-                for (int i = 0; i < ballManager.balls.Count; i++)
-                {
-                    GameObject temp = Instantiate(pelota, ballManager.balls[i].transform.position, ballManager.balls[i].transform.rotation);
-                    float vertical = Random.Range(-1f, 1f);
-                    float horizontal = Random.Range(-1f, 1f);
-                    temp.GetComponent<MoveBall>().direccion = new Vector3(horizontal, vertical, 0);
-                    nuevasBolas.Add(temp);
-                }
+                GameObject temp = Instantiate(pelota, ball.transform.position, ball.transform.rotation);
+                float vertical = Random.Range(-1f, 1f);
+                float horizontal = Random.Range(-1f, 1f);
+                temp.GetComponent<MoveBall>().direccion = new Vector3(horizontal, vertical, 0);
+                nuevasBolas.Add(temp);
+                ui.vidas += 1;
             }
 
             ballManager.balls.AddRange(nuevasBolas);
