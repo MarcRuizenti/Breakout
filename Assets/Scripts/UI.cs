@@ -18,6 +18,7 @@ public class UI : MonoBehaviour
         if (puntuacion >= 210)
         {
             win.SetActive(true);
+            Time.timeScale = 0;
         }
     }
 }
