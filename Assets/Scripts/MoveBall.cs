@@ -34,7 +34,6 @@ public class MoveBall : MonoBehaviour
 
     public void Spawn()
     {
-        transform.position = new Vector3(0, -0.9f, 0);
         float vertical = -1f;
         float horizontal = Random.Range(-1f, 1f);
         direccion = new Vector3(horizontal, vertical, 0f).normalized;
