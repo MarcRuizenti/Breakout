@@ -23,7 +23,7 @@ public class MultiBall : MonoBehaviour
                 GameObject temp = Instantiate(pelota, ball.transform.position, ball.transform.rotation);
                 float vertical = Random.Range(-1f, 1f);
                 float horizontal = Random.Range(-1f, 1f);
-                temp.GetComponent<MoveBall>().direccion = new Vector3(horizontal, vertical, 0);
+                temp.GetComponent<MoveBall>().direccion = new Vector3(horizontal, vertical, 0).normalized;
                 nuevasBolas.Add(temp);
                 ui.vidas += 1;
             }

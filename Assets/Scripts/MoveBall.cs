@@ -16,7 +16,7 @@ public class MoveBall : MonoBehaviour
     private UI ui;
     private BallManager ballManager;
 
-    public enum Ball {MULTIBALL, EXTRABALL, ESCOPETA, NADA};
+    public enum Ball {MULTIBALL, EXTRABALL, ESCOPETA};
     private void Start()
     {
         Time.timeScale = 1f;
@@ -93,6 +93,7 @@ public class MoveBall : MonoBehaviour
             {
                 SpawnPowerUP(collision);
             }
+
             if (collision.gameObject.transform.parent.CompareTag("1"))
             {
                 ui.puntuacion += 1;

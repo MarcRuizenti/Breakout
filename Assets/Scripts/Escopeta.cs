@@ -18,14 +18,14 @@ public class Escopeta : MonoBehaviour
         {
 
             GameObject tempVertical = Instantiate(pelota, new Vector3(collision.transform.position.x, collision.transform.position.y + 0.5f, 0), collision.transform.rotation);
-            tempVertical.GetComponent<MoveBall>().direccion = new Vector3(0, 1f, 0);
+            tempVertical.GetComponent<MoveBall>().direccion = new Vector3(0, 1f, 0).normalized;
 
             GameObject tempDerecha = Instantiate(pelota, new Vector3(collision.transform.position.x, collision.transform.position.y + 0.5f, 0), collision.transform.rotation);
-            tempDerecha.GetComponent<MoveBall>().direccion = new Vector3(-1f, 1f, 0);
+            tempDerecha.GetComponent<MoveBall>().direccion = new Vector3(-1f, 1f, 0).normalized;
 
 
             GameObject tempIzquierda = Instantiate(pelota, new Vector3(collision.transform.position.x, collision.transform.position.y + 0.5f, 0), collision.transform.rotation);
-            tempIzquierda.GetComponent<MoveBall>().direccion = new Vector3(1f, 1f, 0);
+            tempIzquierda.GetComponent<MoveBall>().direccion = new Vector3(1f, 1f, 0).normalized;
 
             ballManager.balls.Add(tempVertical);
             ballManager.balls.Add(tempIzquierda);
